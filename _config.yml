@@ -13,7 +13,7 @@
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
-title: Alain's Tech Blog
+title: 小王的博客
 name: Alain's Tech Blog
 description: 
   This is a blog of someone passionate about technology who wants to share some of the things he knows
