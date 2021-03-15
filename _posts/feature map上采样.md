@@ -5,7 +5,7 @@ category: /小书匠/日记/2021-03
 renderNumberedHeading: true
 grammar_cjkRuby: true
 ---
-
+2021年03月15日
 <h1>feature map上采样</h1>
 <h3>
 1、插值法
@@ -20,3 +20,11 @@ a、Transpose Convolution
 b、微步卷积
 </h4>
 顾名思义就是stride<1。首先和转置卷积一样做padding，然后再在输入特征之间插入0，来使得步长变小。
+
+![微步卷积](./images/微步卷积.png)
+<h4>
+c、Dilated Convolution
+</h4>
+在卷积核的元素之间插入空洞来增大其感受野的大小，空洞的值为0。在Pytorch中，使用的时候修改nn.Conv2d()中的dilation参数(默认为1)就可以了。
+
+![空洞卷积](./images/空洞卷积.png)
