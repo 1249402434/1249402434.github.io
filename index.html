@@ -25,7 +25,7 @@ comments: true
 </div>
 
 <div class="list-group">
-	{% for post in paginator._posts %} 
+	{% for post in paginator.posts %} 
 	<div class="list-group-item">
 	<a href="{{ post.url }}">
 		<h4 class="list-group-item-heading">{{ post.title }}</h4>
@@ -42,7 +42,6 @@ comments: true
 		{% endif %}
 		<p>{{ post.excerpt | strip_html}}</p>
 		<a href="{{ post.url }}">Read more...</a>
-
 	</div>
 	{% endfor %}
 </div>
