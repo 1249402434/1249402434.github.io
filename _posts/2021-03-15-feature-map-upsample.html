@@ -16,15 +16,11 @@ feature map上采样
 <p>速度快，效果也不错。常用的插值法有最近邻、双线性、双三次等。在Pytorch框架中，使用nn.functional.interpolate()函数实现。</p>
 <h3>2、反卷积</h3>
 <h4>
-<p>
 a、Transpose Convolution
-</p>
 </h4>
 <p>对输入做padding，然后对kernel做180度的顺时针旋转，再做正常卷积。通常来说，padding的大小根据kernel去判断，让第一次卷积只会计算feature map的第一个元素。最后计算出feature map的宽高是正向卷积的逆求解。</p>
 <h4>
-<p>
 b、微步卷积
-</p>
 </h4>
 <p>顾名思义就是stride<1。首先和转置卷积一样做padding，然后再在输入特征之间插入0，来使得步长变小。</p>
 <div align="center">
@@ -33,9 +29,7 @@ b、微步卷积
 </div>
 
 <h4>
-<p>
 c、Dilated Convolution
-</p>
 </h4>
 <p>在卷积核的元素之间插入空洞来增大其感受野的大小，空洞的值为0。在Pytorch中，使用的时候修改nn.Conv2d()中的dilation参数(默认为1)就可以了。</p>
 
